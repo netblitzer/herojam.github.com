@@ -1,2 +1,2 @@
-# netblitzer.github.com
+# herojam.github.com
 HeroJam website.
