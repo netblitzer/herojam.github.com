@@ -1,0 +1,374 @@
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  z-index: 0;
+}
+
+
+
+body.ie6 .siteWrapper,
+body.ie7 .siteWrapper,
+body.ie8 .siteWrapper {
+  background-color: #333;
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Strength=50, Direction=0),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Strength=50, Direction=90),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Strength=50, Direction=180),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Strength=50, Direction=270);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  background-color: #333;
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.4);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.4);
+  z-index: 1;
+}
+
+
+/*
+ * Header
+ */
+.masthead.clearfix {
+  position: relative;
+  background: #444;
+  z-index: 5;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0 0 100px rgba(0,0,0,0.75);
+  box-shadow: 0 0 100px rgba(0,0,0,0.75);
+}
+.masthead-brand {
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+em {
+  font-style: normal;
+  color: #FFAA33;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 0px;
+  margin-top: 5px;
+  padding: 0;
+}
+.masthead-nav > li + li {
+  margin-right: 20px;
+  margin-left: 0px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Orange things */
+a.orange,
+.masthead-nav > li >a.orange,
+.orange {
+  color: #FFAA33;
+}
+.masthead-nav > li > a.orange.active {
+  transform: scale(1.2);
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+.selectable::before {
+  content: "";
+  display: block;
+  width: 0;
+  right: 0;
+  left: 100%;
+  height: 2px;
+  background: rgba(255,255,255,.25);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  top: 3px;
+  position: absolute;
+}
+.selectable::after {
+  content: "";
+  display: block;
+  width: 0;
+  right: 100%;
+  left: 0;
+  height: 2px;
+  background: rgba(255,255,255,.25);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  bottom: 3px;
+  position: absolute;
+}
+.selectable:hover::before {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.selectable:hover::after {
+  width: 100%;
+  right: 0;
+  left: 0;
+  transition: width 0.3s, left 0.3s;
+}
+.selectable.active::before {
+  top: 3px;
+}
+.selectable.active::after {
+  bottom: 5px;
+}
+.selectable.orange::before,
+.selectable.orange::after {
+  background: rgba(255,150,50,.5);
+}
+
+
+/*
+ * Lead
+ */
+.forward-container {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  max-width: 1200px;
+  
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  
+  z-index: 2;
+}
+.forward {
+  position: relative;
+  height: 50vw;
+  width: 100vw;
+  max-height: 600px;
+  max-width: 1200px;
+  
+  margin: 0;
+  padding: 0;
+  
+  background-image: url("../media/header_image_1280.png");
+  background-size: cover;
+  
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5), 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5), 0 0 100px rgba(0,0,0,.5);
+}
+.forward-text {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.forward-text > p {
+  text-shadow: 0 0 15px rgba(0,0,0,0.75), 0 0 3px rgba(0,0,0,1);
+}
+.forward-text > h2 {
+  text-shadow: 0 0 15px rgba(0,0,0,0.75), 0 0 3px rgba(0,0,0,1);
+  margin-top: 0;
+}
+.forward-text > p > a {
+  text-decoration: none;
+}
+
+
+/*
+ * Main Content
+ */
+.main-container {
+  position: relative;
+  width: 100%;
+  
+  padding: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  background: #444;
+  z-index: 3;
+  
+  -webkit-box-shadow: 0 0 100px rgba(0,0,0,.6);
+  box-shadow: 0 0 100px rgba(0,0,0,.6);
+}
+.text-muted {
+  color: #CCC;
+  color: rgba(255,255,255,.75);
+}
+.lead-follow,
+.lead-follow:active,
+.lead-follow:visited,
+.lead-follow:hover {
+  color: #FA3;
+  text-decoration: none;
+}
+.featurette-image {
+  margin-top: 20px;
+}
+.featurette-divider {
+  border-color: #222;
+  border-width: 2px;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  position: relative;
+  height: 24px;
+  width: 100%;
+  
+  padding: 0;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #999;
+  color: rgba(255,255,255,.5);
+}
+.mastfoot p {
+  margin: 0;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 400px) {
+  .masthead.clearfix {
+    height: 80px;
+  }
+  .masthead-nav > li {
+    transform: scale(0.9);
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .masthead-brand {
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
+  .masthead-nav > li + li {
+    transform: scale(0.9);
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .featurette-heading,
+  .forward-text > h2 {
+    font-size: 20px;
+  }
+  .lead,
+  .forward-text > p {
+    font-size: 12px;
+  }
+  
+  .mastfoot p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .masthead.clearfix {
+    height: 50px;
+  }
+  .masthead .inner {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .forward {
+    max-height: 446px;
+  }
+  .forward-text {
+    width: 720px;
+  }
+  .forward-text > h2 {
+    font-size: 36px;
+  }
+
+  .featurette-heading {
+    font-size: 36px;
+  }
+  .featurette-image {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead.clearfix {
+    max-width: 1280px;
+  }
+  
+  .forward-container {
+  }
+  .forward-text > h2 {
+    font-size: 48px;
+  }
+  
+  .main-container {
+    max-width: 1280px;
+  }
+  .featurette-heading {
+    margin-top: 170px;
+  }
+}
